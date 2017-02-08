@@ -1,6 +1,6 @@
 FROM lballabio/quantlib-python
-MAINTAINER Luigi Ballabio <luigi.ballabio@gmail.com>
-LABEL Description="An IPython notebook server with the QuantLib Python module available"
+MAINTAINER ts williams <tstwasg@gmail.com>
+LABEL Description="An IPython notebook server with the QuantLib Python as other modules available"
 
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y ipython-notebook python-matplotlib \
