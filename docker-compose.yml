@@ -8,7 +8,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./nb:/nobebooks
+      - ./nb:/notebooks
   db:
     image: postgres:latest
     ports:

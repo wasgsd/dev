@@ -10,6 +10,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* \
  && easy_install pip \
  && pip install pyzmq
+ && pip install pyspark_elastic
 
 EXPOSE 8888
 
