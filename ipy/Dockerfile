@@ -11,6 +11,7 @@ RUN apt-get update \
  && easy_install pip \
  && pip install pyzmq
  && pip install pyspark_elastic
+ && pip install quandl
 
 EXPOSE 8888
 
