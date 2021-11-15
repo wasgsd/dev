@@ -6,7 +6,7 @@
 import zmq
 import datetime
 
-def main():
+def test_zmq():
     ctx = zmq.Context()
 #     ctx = zmq.Context.instance()
     
