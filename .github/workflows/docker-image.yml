@@ -19,7 +19,7 @@ jobs:
     - name: Build Docker image
       run: |
           # Get the directory name of the Dockerfile
-          DOCKERFILE_DIR=$(dirname "${{GITHUB_EVENT_PATH}}")
+          DOCKERFILE_DIR=$(dirname "$GITHUB_EVENT_PATH")
           # Extract the folder name from the directory path
           FOLDER_NAME=$(basename "$DOCKERFILE_DIR")
           # Build the Docker image and tag it with the folder name
