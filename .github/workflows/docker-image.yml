@@ -1,0 +1,28 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+    paths:
+      - "*/*.Dockerfile"
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build Docker image
+      run: |
+          # Get the directory name of the Dockerfile
+          DOCKERFILE_DIR=$(dirname "$GITHUB_EVENT_PATH")
+          # Extract the folder name from the directory path
+          FOLDER_NAME=$(basename "$DOCKERFILE_DIR")
+          # Build the Docker image and tag it with the folder name
+          docker build -t "$FOLDER_NAME" "$DOCKERFILE_DIR"
+#your-registry/your-repo:
+    timeout-minutes: 15
